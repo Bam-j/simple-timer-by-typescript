@@ -7,5 +7,17 @@ export const startAndPauseButtonAction = (startAndPauseButton: HTMLElement) => {
 
   checkInputValid(hour, minute, second);
 
-  remainTotalSeconds = hour + minute + second;
+  (<HTMLInputElement>document.getElementById('input-hour')).disabled = true;
+  (<HTMLInputElement>document.getElementById('input-minute')).disabled = true;
+  (<HTMLInputElement>document.getElementById('input-second')).disabled = true;
+  (<HTMLButtonElement>document.getElementById('resetButton')).disabled = false;
+
+  remainTotalSeconds = hour * 360 + minute * 60 + second;
+
+  if (startAndPauseButton.innerText === 'start') {
+    startAndPauseButton.innerText = 'pause';
+  }
+  else {
+    startAndPauseButton.innerText = 'start';
+  }
 };
