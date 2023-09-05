@@ -1,4 +1,5 @@
 import {startAndPauseButtonAction} from './Buttons/startAndPauseButtonAction';
+import {resetButtonAction} from './Buttons/resetButtonAction';
 
 document.addEventListener('DOMContentLoaded', () => {
   const startAndPauseButton = document.getElementById('startAndPauseButton');
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (resetButton !== null) {
     resetButton.addEventListener('click', () => {
-
+      resetButtonAction();
     });
   }
 });

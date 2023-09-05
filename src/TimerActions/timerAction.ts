@@ -1,11 +1,11 @@
-import {getTimeInfo} from '../utils/getTimeInfo';
 import {updateInput} from './updateInputs';
 import {clearInterval} from 'timers';
+import {getInputElements} from '../utils/getInputElements';
 
 export let timerInterval: string | number | NodeJS.Timeout | undefined;
 
 export const timerAction = (remainTotalSeconds: number) => {
-  const [hour, minute, second] = getTimeInfo();
+  const [hourInputFormElement, minuteInputFormElement, secondInputFormElement] = getInputElements();
 
   timerInterval = setInterval(() => {
     remainTotalSeconds--;
@@ -14,9 +14,9 @@ export const timerAction = (remainTotalSeconds: number) => {
     if (remainTotalSeconds <= 0) {
       window.alert('시간 종료!');
 
-      (<HTMLInputElement>document.getElementById('input-hour')).disabled = false;
-      (<HTMLInputElement>document.getElementById('input-minute')).disabled = false;
-      (<HTMLInputElement>document.getElementById('input-second')).disabled = false;
+      hourInputFormElement.disabled = false;
+      minuteInputFormElement.disabled = false;
+      secondInputFormElement.disabled = false;
 
       clearInterval(timerInterval);
     }

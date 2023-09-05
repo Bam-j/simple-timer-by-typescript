@@ -59,9 +59,9 @@ td.disable-drag {
   user-select:none
 }
 
-#input-hour:focus,
-#input-minute:focus,
-#input-second:focus{
+#hour-input:focus,
+#minute-input:focus,
+#second-input:focus{
   border: solid #083DDB;
   outline: none;
   box-shadow: 0 0 0.1em 0.1em #5B7CD8;
