@@ -16,7 +16,7 @@ export const startAndPauseButtonAction = (startAndPauseButton: HTMLElement) => {
 
   (<HTMLButtonElement>document.getElementById('resetButton')).disabled = false;
 
-  remainTotalSeconds = hour * 360 + minute * 60 + second;
+  remainTotalSeconds = hour * 60 * 60 + minute * 60 + second;
 
   if (startAndPauseButton.innerText === 'start') {
     startAndPauseButton.innerText = 'pause';

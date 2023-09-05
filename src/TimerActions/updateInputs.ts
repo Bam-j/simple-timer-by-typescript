@@ -7,7 +7,7 @@ export const updateInput = (remainTotalSeconds: number): void => {
   const currentMinute = Math.floor((remainTotalSeconds / 60) % 60);
   const currentSecond = Math.floor(remainTotalSeconds % 60);
 
-  hourInputFormElement.value = currentHour.toString();
-  minuteInputFormElement.value = currentMinute.toString();
-  secondInputFormElement.value = currentSecond.toString();
+  hourInputFormElement.value = `${currentHour}`;
+  minuteInputFormElement.value = `${currentMinute}`;
+  secondInputFormElement.value = `${currentSecond}`;
 };
