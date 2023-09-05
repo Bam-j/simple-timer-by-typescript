@@ -1,8 +1,10 @@
 import {getInputElements} from '../utils/getInputElements';
 import {timerInterval} from '../TimerActions/timerAction';
+import {getButtonElements} from '../utils/getButtonElements';
 
 export const resetButtonAction = () => {
   const [hourInputFormElement, minuteInputFormElement, secondInputFormElement] = getInputElements();
+  const [startAndPauseButton, resetButton] = getButtonElements();
 
   hourInputFormElement.disabled = false;
   hourInputFormElement.value = '';
@@ -11,8 +13,8 @@ export const resetButtonAction = () => {
   secondInputFormElement.disabled = false;
   secondInputFormElement.value = '';
 
-  (<HTMLButtonElement>document.getElementById('resetButton')).disabled = true;
-  (<HTMLButtonElement>document.getElementById('startAndPauseButton')).innerText = 'start';
+  startAndPauseButton.innerText = 'start';
+  resetButton.disabled = true;
 
   clearInterval(timerInterval);
 };

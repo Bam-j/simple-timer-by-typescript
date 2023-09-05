@@ -1,9 +1,11 @@
 import {startAndPauseButtonAction} from './Buttons/startAndPauseButtonAction';
 import {resetButtonAction} from './Buttons/resetButtonAction';
+import {getButtonElements} from './utils/getButtonElements';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const startAndPauseButton = document.getElementById('startAndPauseButton');
-  const resetButton = document.getElementById('resetButton');
+  const [startAndPauseButton, resetButton] = getButtonElements();
+  //const startAndPauseButton = <HTMLButtonElement>document.getElementById('startAndPauseButton');
+  //const resetButton = <HTMLButtonElement>document.getElementById('resetButton');
 
   if (startAndPauseButton !== null) {
     startAndPauseButton.addEventListener('click', () => {
