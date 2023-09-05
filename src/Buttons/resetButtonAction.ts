@@ -1,6 +1,4 @@
-import {getTimeInfo} from '../utils/getTimeInfo';
 import {getInputElements} from '../utils/getInputElements';
-import {clearInterval} from 'timers';
 import {timerInterval} from '../TimerActions/timerAction';
 
 export const resetButtonAction = () => {

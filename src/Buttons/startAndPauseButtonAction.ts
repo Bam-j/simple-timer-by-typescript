@@ -1,7 +1,6 @@
 import {getTimeInfo} from '../utils/getTimeInfo';
 import {checkInputValid} from '../utils/checkInputValid';
 import {timerAction, timerInterval} from '../TimerActions/timerAction';
-import {clearInterval} from 'timers';
 import {getInputElements} from '../utils/getInputElements';
 
 export const startAndPauseButtonAction = (startAndPauseButton: HTMLElement) => {

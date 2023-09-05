@@ -1,5 +1,4 @@
 import {updateInput} from './updateInputs';
-import {clearInterval} from 'timers';
 import {getInputElements} from '../utils/getInputElements';
 
 export let timerInterval: string | number | NodeJS.Timeout | undefined;
