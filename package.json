@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open",
-    "build": "webpack",
+    "build": "webpack --mode development",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -18,7 +17,8 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
-    "ts-loader": "^9.4.4"
+    "ts-loader": "^9.4.4",
+    "webpack-cli": "^5.1.4"
   },
   "homepage": "https://bam-j.github.io/simple-timer-by-typescript/"
 }
